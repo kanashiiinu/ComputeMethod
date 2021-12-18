@@ -9,5 +9,13 @@
         "tolist",
         "xlabel",
         "ylabel"
-    ]
+    ],
+    "python.analysis.extraPaths": [
+        "./ex5"
+    ],
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }
