@@ -14,9 +14,7 @@ class TestGaussEliminationComputeDeterminant:
                   [-7.0, 5.0, -3.0, -6.0],
                   [2.0, 1.0, -1.0, 3.0], 
                   [4.0, -3.0, 2.0, 8.0]]
-        assert abs(
-            gauss_elimination_compute_determinant(A_list) -
-            np.linalg.det(A_list)) < 1e-6
+        assert abs(gauss_elimination_compute_determinant(A_list) - np.linalg.det(A_list)) < 1e-6
 
 
 if __name__ == '__main__':
