@@ -73,7 +73,7 @@ def runge_kutta_4(y0: float, point_x_list: list, func: Function) -> np.ndarray:
         K[0] = (K[1] + 2 * K[2] + 2 * K[3] + K[4]) / 6
         yk_1 = yk + K[0] * h
         runge_kutta_4_array[i][1] = yk_1
-        print(K)
+        # print(K)
     return runge_kutta_4_array
 
 
@@ -81,15 +81,24 @@ if __name__ == "__main__":
     # y' = y - 2x/y
     # y(0) = 1
     #numpy.around(a, n)
-    a = 0.0
-    b = 1.0
+    # a = 0.0
+    # b = 1.0
+    print("a:")
+    a = float(input())
+    print("b:")
+    b = float(input())
     h = 0.1
     # point_x_list = np.linspace(0.0, 1.0, 11).tolist()
     point_x_list = get_segmented_interval(a,b,h)
     print(np.around(point_x_list, 5))
     y_k = 0
-    y0 = 1
+    print("y0:")
+    # y0 = 1.0
+    y0 = float(input()) 
     func = Function()
+    print("euler_scheme")
     print(euler_scheme(y0, point_x_list, func))
+    print("improved_euler_scheme")
     print(improved_euler_scheme(y0, point_x_list, func))
+    print("runge_kutta_4")
     print(runge_kutta_4(y0, point_x_list, func))

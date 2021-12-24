@@ -74,7 +74,7 @@ def gauss_seidel(input_A, input_b, N, x0, tolerance_error):
         f = intermediate_matrix @ b
 
         for i in range(N):
-            print(i, x_k, sep="\n")
+            # print(i, x_k, sep="\n")
             x_k_1 = G @ x_k + f
             if is_condition_enough(x_k, x_k_1, tolerance_error):
                 return x_k_1
@@ -98,9 +98,9 @@ def is_condition_enough(x_k, x_k_1, tolerance_error):
 
 if __name__ == "__main__":
 
-    N = 5
+    N = 10 
     tolerance_error = 1e-5
     input_A = np.mat([[10, -1, -2], [-1, 10, -2], [-1, -1, 5]])
-    input_b = np.transpose(np.array([[7.2, 8.3, 4.2]]))
+    input_b = np.transpose(np.mat([[7.2, 8.3, 4.2]]))
     x0 = [[0, 0, 0]]
     print(gauss_seidel(input_A, input_b, N, x0, tolerance_error), sep="\n")
