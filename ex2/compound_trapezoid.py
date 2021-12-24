@@ -1,3 +1,4 @@
+# 2019215049汪海涛
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -38,7 +39,9 @@ if __name__ == "__main__":
             - compound_trapezoid(down_list)) \
             * ((40 / 18) \
             * (40 / 18))
+    print("Land area of Switzerland :")
     print(np.around(land_s,2))
     exact_val = 41288
     error_val = abs(land_s - exact_val)
+    print("error percentage is:")
     print("{:.2%}".format(error_val/exact_val))

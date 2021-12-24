@@ -1,8 +1,10 @@
+# 2019215049汪海涛
 import numpy as np
 
 
 def lagrange_interpolation(inter_point_list: list, input_num: float) -> float:
     inter_point_arr = np.array(inter_point_list)
+    n = len(inter_point_arr)
     l_arr = np.zeros(n)
     for i in range(n):
         cur_x = inter_point_arr[i][0]
@@ -25,6 +27,7 @@ def piecewise_lagrange_interpolation(inter_point_list: list,
                                      input_num: float) -> float:
     inter_point_arr = np.array(inter_point_list)
     inter_point_x_arr = np.transpose(inter_point_arr)[0]
+    n = len(inter_point_x_arr)
     if input_num in inter_point_x_arr:
         return inter_point_arr[np.where(inter_point_x_arr == input_num)][1]
     else:
