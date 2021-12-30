@@ -15,6 +15,8 @@ def is_row_strictly_diagonally_dominant(input_A):
             pass
         else:
             return False
+        pass
+    pass
     return True
 
 
@@ -46,6 +48,9 @@ def get_index_element(input_A, is_condition_enough):
                 A_arr[i][j] = A[i][j]
             else:
                 pass
+            # 
+        # 
+    # 
     return np.mat(A_arr)
 
 
@@ -69,7 +74,8 @@ def gauss_seidel(input_A, input_b, N, x0, tolerance_error):
             x_k = np.mat(x0)
         else:
             x_k = np.mat(np.transpose(x0))
-
+        pass
+    
         intermediate_matrix = (D + L).I
         G = -intermediate_matrix @ U
         f = intermediate_matrix @ b
@@ -81,6 +87,8 @@ def gauss_seidel(input_A, input_b, N, x0, tolerance_error):
                 return x_k_1
             else:
                 x_k = x_k_1.copy()
+            pass
+        pass
         return "迭代失败,x{}\n{:s}".format(N,str(x_k))
     else:
         print("非严格对角占优，无法迭代")
@@ -105,3 +113,4 @@ if __name__ == "__main__":
     input_b = np.transpose(np.mat([[7.2, 8.3, 4.2]]))
     x0 = [[0, 0, 0]]
     print(gauss_seidel(input_A, input_b, N, x0, tolerance_error), sep="\n")
+pass

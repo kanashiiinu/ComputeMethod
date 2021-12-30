@@ -14,7 +14,7 @@ if __name__ == "__main__":
     print("input inter_value:")
     input_num = float(input())
     print("accurate val:")
-    accurate_val = 1/(input_num*input_num) 
+    accurate_val = 1/(1+input_num*input_num) 
     print(accurate_val)
     print("拉格良日插值")
     val_l = lagrange_interpolation(inter_point_list, input_num)
